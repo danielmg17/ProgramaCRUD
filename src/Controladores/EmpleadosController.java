@@ -46,6 +46,7 @@ public class EmpleadosController implements ActionListener{
             
             this.MiConexion.Conectar();
             this.VistaPrincipal.setVisible(false);
+            this.VistaEmpleados.setLocationRelativeTo(VistaEmpleados);
             this.VistaEmpleados.setVisible(true);
         }        
 
