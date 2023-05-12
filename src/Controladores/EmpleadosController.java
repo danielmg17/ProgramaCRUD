@@ -44,7 +44,7 @@ public class EmpleadosController implements ActionListener{
         
         if(e.getSource() == this.VistaPrincipal.btnEmpleados){
             
-            this.MiConexion.conectar("", "");
+            this.MiConexion.Conectar();
             this.VistaPrincipal.setVisible(false);
             this.VistaEmpleados.setVisible(true);
         }        

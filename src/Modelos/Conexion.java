@@ -15,7 +15,7 @@ public class Conexion {
     
     Connection Conexion;
     
-    public Connection conectar(String user, String pass){
+    public Connection Conectar(){
         
         try{
         DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
@@ -25,9 +25,11 @@ public class Conexion {
         String sid="umg";
         String url="jdbc:oracle:thin:@"+nombre_servidor+":"+numero_puerto+":"+sid;
         
-        Conexion=DriverManager.getConnection(url,"HA5","Umg$2023");
+        String usuario = "HA5";
+        String password = "Umg$2023";
+        Conexion=DriverManager.getConnection(url,usuario,password);
        // return Conexion;
-        JOptionPane.showMessageDialog(null,"Conexion Exitosa");
+        JOptionPane.showMessageDialog(null,"Conexion Exitosa!!!");
           return Conexion;
           
         }catch(SQLException e){
